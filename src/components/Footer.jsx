@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="footer-content">
           <div className="footer-brand">
             <a href="#" className="logo" onClick={(e) => { e.preventDefault(); window.scrollTo({top:0, behavior:'smooth'}); }}>
-              <img src="logo.png" alt="옆집선생 길목 커뮤니티" style={{ height: '90px', width: 'auto' }} />
+              <img src="/logo.png" alt="옆집선생 길목 커뮤니티" style={{ height: '90px', width: 'auto' }} />
             </a>
             <p className="footer-desc">
               혼자가 아닌 함께라서 더 행복한 배움의 공간.<br/>
