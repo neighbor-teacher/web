@@ -63,18 +63,29 @@ export default function ApplySection({ selectedClass, setSelectedClass }) {
       };
       localStorage.setItem('gilmok_submissions', JSON.stringify([...existingSubmissions, newSubmission]));
       
-      // 구글 앱스 스크립트(Google Apps Script) 등을 사용한 구글 시트 연동시 참고 코드:
-      /*
-      const GOOGLE_SHEET_API = import.meta.env.VITE_GOOGLE_SHEET_API;
-      if (GOOGLE_SHEET_API) {
-        fetch(GOOGLE_SHEET_API, {
+      // 텔레그램 채널 실시간 알림 전송
+      const BOT_TOKEN = import.meta.env.VITE_TELEGRAM_BOT_TOKEN;
+      const CHAT_ID = import.meta.env.VITE_TELEGRAM_CHAT_ID;
+      
+      if (BOT_TOKEN && CHAT_ID) {
+        const text = `🔔 *새로운 프로그램 참여 신청*\n\n` +
+          `• *프로그램*: ${formData.className}\n` +
+          `• *이름*: ${formData.name}\n` +
+          `• *연락처*: ${formData.phone}\n` +
+          `• *거주지*: ${formData.location}\n` +
+          `• *신청일시*: ${new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' })}`;
+          
+        fetch(`https://api.telegram.com/bot${BOT_TOKEN}/sendMessage`, {
           method: 'POST',
-          mode: 'no-cors',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(newSubmission)
-        });
+          body: JSON.stringify({
+            chat_id: CHAT_ID,
+            text: text,
+            parse_mode: 'Markdown'
+          })
+        }).catch(err => console.error('Telegram notification failed:', err));
       }
-      */
+      
       
       setIsSubmitted(true);
       // Reset form
