@@ -75,7 +75,7 @@ export default function ApplySection({ selectedClass, setSelectedClass }) {
           `• *거주지*: ${formData.location}\n` +
           `• *신청일시*: ${new Date().toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' })}`;
           
-        fetch(`https://api.telegram.com/bot${BOT_TOKEN}/sendMessage`, {
+        fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
