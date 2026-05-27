@@ -11,7 +11,7 @@ export default function HeroSection() {
       <div className="container animate-fade-in-up">
         <span className="hero-subtitle">나를 위한 즐거운 변화</span>
         <h1 className="hero-title">
-          옆집선생과<br className="mobile-only" /> 함께하는<br className="desktop-only" /> 배움의 길목
+          옆집선생과<br className="mobile-only" /> 함께하는<br /> 배움의 길목
         </h1>
         <p className="hero-desc">
           혼자가 아닌 함께라서<br className="mobile-only" /> 더 행복한 공간.<br />
