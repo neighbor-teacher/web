@@ -92,12 +92,40 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 배경 이미지를 ::before로 처리 — iOS Safari는 background-attachment: fixed 미지원 */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/hero-bg.jpg');
   background-size: cover;
   background-position: center;
+  /* 데스크톱에서만 fixed parallax 적용 */
   background-attachment: fixed;
-  color: white;
+  z-index: 0;
+}
+
+/* iOS Safari & 모바일: fixed 대신 scroll 사용 */
+@supports (-webkit-touch-callout: none) {
+  .hero::before {
+    background-attachment: scroll;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero::before {
+    background-attachment: scroll;
+  }
+}
+
+.hero > * {
   position: relative;
+  z-index: 1;
 }
 
 .hero-subtitle {
