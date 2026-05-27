@@ -16,7 +16,7 @@ export default function Header() {
           <button className="nav-link" onClick={() => scrollTo('story')}>소개</button>
           <button className="nav-link" onClick={() => scrollTo('clubs')}>동아리</button>
           <button className="nav-link" onClick={() => scrollTo('mission')}>우리의 미션</button>
-          <button className="btn-primary" style={{ padding: '10px 24px', fontSize: '1rem', borderRadius: '4px' }} onClick={() => scrollTo('footer')}>참여하기</button>
+          <button className="btn-primary" style={{ padding: '10px 24px', fontSize: '1rem', borderRadius: '4px' }} onClick={() => scrollTo('apply')}>참여하기</button>
         </nav>
       </div>
     </header>

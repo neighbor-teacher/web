@@ -1,6 +1,6 @@
 export default function HeroSection() {
-  const scrollToClubs = () => {
-    const el = document.getElementById('clubs');
+  const scrollToApply = () => {
+    const el = document.getElementById('apply');
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
     }
@@ -15,7 +15,7 @@ export default function HeroSection() {
           혼자가 아닌 함께라서 더 행복한 공간.<br/>
           이웃의 재능이 모여 우리의 일상을 바꿉니다.
         </p>
-        <button className="btn-primary delay-200" onClick={scrollToClubs}>
+        <button className="btn-primary delay-200" onClick={scrollToApply}>
           지금 바로 참여하기
         </button>
       </div>
