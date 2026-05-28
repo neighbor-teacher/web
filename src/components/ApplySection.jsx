@@ -15,6 +15,7 @@ export default function ApplySection({ selectedClass, setSelectedClass }) {
 
   useEffect(() => {
     if (selectedClass) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setFormData(prev => ({ ...prev, className: selectedClass }));
     }
   }, [selectedClass]);
@@ -100,6 +101,7 @@ export default function ApplySection({ selectedClass, setSelectedClass }) {
         setSelectedClass('');
       }
     } catch (err) {
+      console.error('Submission error:', err);
       setErrorMessage('신청 과정 중 오류가 발생했습니다. 다시 시도해 주세요.');
     }
   };
@@ -152,6 +154,13 @@ export default function ApplySection({ selectedClass, setSelectedClass }) {
                   <option value="색채힐링">색채힐링</option>
                   <option value="건강마스터">건강마스터</option>
                   <option value="AI">AI</option>
+                  <option value="네일아트">네일아트</option>
+                  <option value="비즈공예">비즈공예</option>
+                  <option value="AI스터디">AI스터디</option>
+                  <option value="캘리그라피">캘리그라피</option>
+                  <option value="아로마테라피">아로마테라피</option>
+                  <option value="별빛러닝">별빛러닝</option>
+                  <option value="약손마사지">약손마사지</option>
                 </select>
               </div>
 
