@@ -153,10 +153,10 @@ export default function ApplySection({ selectedClass, setSelectedClass }) {
                   <option value="손재주">손재주</option>
                   <option value="색채힐링">색채힐링</option>
                   <option value="건강마스터">건강마스터</option>
-                  <option value="AI">AI</option>
+                  <option value="AI (30-40)">AI (30-40)</option>
                   <option value="네일아트">네일아트</option>
                   <option value="비즈공예">비즈공예</option>
-                  <option value="AI스터디">AI스터디</option>
+                  <option value="AI스터디 (50-60)">AI스터디 (50-60)</option>
                   <option value="캘리그라피">캘리그라피</option>
                   <option value="아로마테라피">아로마테라피</option>
                   <option value="별빛러닝">별빛러닝</option>

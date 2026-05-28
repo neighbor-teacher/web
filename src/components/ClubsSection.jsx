@@ -24,7 +24,7 @@ export default function ClubsSection({ onSelectClass }) {
     },
     {
       icon: <Bot size={48} strokeWidth={1} />,
-      title: "AI",
+      title: "AI (30-40)",
       desc: "인공지능과 디지털 기술을 쉽고 재미있게 배우며 미래를 준비합니다."
     },
     {
@@ -39,7 +39,7 @@ export default function ClubsSection({ onSelectClass }) {
     },
     {
       icon: <Brain size={48} strokeWidth={1} />,
-      title: "AI스터디",
+      title: "AI스터디 (50-60)",
       desc: "최신 AI 트렌드를 함께 공부하고, 실무와 일상에 유용한 AI 도구 사용법을 깊이 있게 연구합니다."
     },
     {
